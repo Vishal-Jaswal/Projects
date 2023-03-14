@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assignment 2</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gift Shop Assignment 2 - Vishal, 8866811</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <form id="myform" onsubmit="finalReceiptOutput();return false">
+  <!--Gift1-->
+      <div>
+        <ul>
+        <li>
+          <h2>Adidas Shoe Type 1</h2>
+          <p>Price: $5</span><br>
+          <img
+          src="./images/Adidas1.jpg"
+          width="300px"
+          height="300px"
+          alt="Journal Book Gift"
+        /><br />
+        <input type="text" id="gift1" name="gift1" placeholder="Enter quantity" /> 
+    <input type="button" value="Add To Cart" onclick="itemQuantity('Adidas Shoe Type 1', 5, `${document.getElementById('gift1').value}`,'invalidGift1')"></input>
+<p width="50px"
+height="30px" id="invalidGift1"> </p></li>
+        
+  
+  <!--Gift2-->
+        <li>
+          <h2>Adidas Shoe Type 2</h2>
+          <p>Price: $10<br>
+          <img
+          src="./images/Adidas2.jpg"
+          width="300px"
+          height="300px"
+          alt="Journal Book Gift"
+        /><br />
+        <input type="text" id="gift2" name="gift2" placeholder="Enter quantity" /> 
+        <input type="button" value="Add To Cart" onclick="itemQuantity('Adidas Shoe Type 2', 10, `${document.getElementById('gift2').value}`, 'invalidGift2')"></input><p id="invalidGift2"></p>
+    </li>
+       
+  
+      <!-- Gift3 -->
+        <li>
+          <h2>Adidas Shoe Type 3</h2>
+          <p>Price: $15<br>
+          <img
+          src="./images/Adidas3.jpg"
+          width="300px"
+          height="300px"
+          alt="Journal Book Gift"
+        /><br />
+        <input type="text" id="gift3" name="gift3" placeholder="Enter quantity" />
+        <input type="button" value="Add To Cart" onclick="itemQuantity('Adidas Shoe Type 3', 15, `${document.getElementById('gift3').value}`,'invalidGift3')"></input><p id="invalidGift3"></p>
+    </li>
+        
+  
+      <!-- gift 4 -->
+        <li>
+          <h2>Adidas Shoe Type 4</h2>
+          <p>Price: $20<br>
+          <img
+          src="./images/Adidas4.jpg"
+          width="300px"
+          height="300px"
+          alt="Journal Book Gift"
+        /><br />
+        <input type="text" id="gift4" name="gift4" placeholder="Enter quantity" /> 
+        <input type="button" value="Add To Cart" onclick="itemQuantity('Adidas Shoe Type 4', 20, `${document.getElementById('gift4').value}`,'invalidGift4')"></input><p id="invalidGift4"></p>
+    </li>
+        </ul> </div> 
+
+        <div>
+        <!--Just to print error message for quantities-->
+   <p id="invalidGift1"></p> <p id="invalidGift2"></p> <p id="invalidGift3"></p> <p id="invalidGift4"></p>
+   </div>
+
+      <!-- Full Name -->
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" value="" name="fullName" placeholder="Enter your Full Name" />&nbsp;<span id="invalidName"></span>
+      <br>
+
+      <!-- Phone number -->
+      <label for="phone">Phone number</label>
+      <input type="text" id="phone" name="phone" value=""  placeholder="123-4567-890" />&nbsp; <span id="invalidPhone"></span>
+     <br>
+      
+      <!-- Credit Card Number -->
+      <label for="creditCard">Credit Card Number</label>
+      <input type="text" id="creditCard" name="creditCard" value="" placeholder="xxxx-xxxx-xxxx-xxxx" value=""/>&nbsp;<span id="invalidCreditCard"></span>
+     <br>
+  
+      <!-- Credit Card Month -->
+      <label for="month">Credit Card Month</label>
+      <input type="text" id="month" name="month" value="" placeholder="XX" /> &nbsp;<span id="invalidMonth"></span>
+       <br>
+  
+      <!-- Credit Card Year -->
+      <label for="year">Credit Card Year</label>
+      <input type="text" id="year" name="year" value="" placeholder="YYYY" />&nbsp;<span id="invalidYear"></span>
+       <br>
+  
+      <span id="invalidDetails"></span><br>
+      <button type="submit">Checkout</button>
+      </p>
+  
+      <!-- Div tag will show the Receipt. -->
+      <div id="receiptOutput">
+      </div>
+    </form>
+  </body>
+
+</html>
